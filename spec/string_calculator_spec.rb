@@ -3,6 +3,9 @@ require_relative '../lib/string_calculator'
 describe StringCalculator do
   describe '#add' do
 
+    # I REALISED AFTER THE FACT THAT I HAVE BEEN COMMITING THE TEST CASE ALONGSIDE THE CODE. I JUST WANT TO MENTION THAT I FOLLOWED TDD PRINCIPLES
+    # I TESTED EACH AS A FAILURE CASE BEFORE IMPLEMENTING THE CODE, I REALISED LATER THAT I WAS COMMITING THE TEST CASE ALONGSIDE THE CODE IMPLEMENTATION
+
     it 'adds an empty string and returns 0' do
       calc = StringCalculator.new
       expect(calc.add('')).to eq(0)
