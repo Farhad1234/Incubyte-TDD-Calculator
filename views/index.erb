@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>String Calculator</title>
+</head>
+<body>
+  <h2>String Calculator</h2>
+  <form method="POST" action="/calculate">
+    <textarea name="numbers" placeholder="e.g. 1,2,3 or //;\n1;2" rows="3" cols="30"><%= params[:numbers] %></textarea><br>
+    <button type="submit">Calculate</button>
+  </form>
+  <% if @output %>
+    <div><%= @output %></div>
+  <% end %>
+</body>
+</html>
