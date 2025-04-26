@@ -7,7 +7,7 @@ Boilerplate was generated using `rails new . --skip-bundle`
 * ### Build
     To build the docker image run `docker build -t string-calculator .`
 * ### Run
-    To run the docker image run `docker run -e RAILS_ENV=development -p 3000:3000 string-calculator`
+    To run the docker image run `docker run --rm --name string-calculator -e RAILS_ENV=development -p 3000:3000 string-calculator`
 
 [//]: # (* ### Web port)
 [//]: # (  UI is available at http://localhost:3000, TBD )
@@ -16,4 +16,4 @@ Boilerplate was generated using `rails new . --skip-bundle`
 [//]: # (    To run the tests run `docker run -e RAILS_ENV=test -p 3000:3000 string-calculator To be confirmed once rspec is implemented)
 
 [//]: # (Execute in CLI)
-[//]: # (   TBD)
+[//]: # (   docker exec -it string-calculator bash)
