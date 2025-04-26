@@ -22,6 +22,10 @@ describe StringCalculator do
       calc = StringCalculator.new
       expect(calc.add('1,2,3,4,5')).to eq(15)
     end
+    it 'returns the sum for multiple numbers with new lines between numbers as delimiters' do
+      calc = StringCalculator.new
+      expect(calc.add("1\n2,3\n4,5")).to eq(15)
+    end
 
   end
 end
