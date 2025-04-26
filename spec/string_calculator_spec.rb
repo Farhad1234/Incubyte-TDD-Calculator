@@ -33,5 +33,15 @@ describe StringCalculator do
       expect(calc.add("//;\n1;2")).to eq(3)
     end
 
+    it 'throws an error for a single negative number' do
+      calc = StringCalculator.new
+      expect { calc.add('1,-2,3') }.to raise_error("negative numbers not allowed -2")
+    end
+
+    it 'throws an error listing all negative numbers if multiple are present' do
+      calc = StringCalculator.new
+      expect { calc.add('-1,-2,3') }.to raise_error("negative numbers not allowed -1,-2")
+    end
+
   end
 end
